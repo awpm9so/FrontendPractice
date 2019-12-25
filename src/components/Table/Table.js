@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Table.css'
 
 export default props => (
 
@@ -18,6 +18,14 @@ export default props => (
                     <tr >                       
                         <td>{item.fname}</td>
                         <td>{item.lname}</td>
+                        <td>
+                        <select>
+                            {
+                            props.data.map(item =>(                                                           
+                            <option value="сat1">{item.fname}</option>                                                                                                                               
+                            ))}
+                            </select>
+                        </td>
                     </tr>
                 ))}
             </tbody>
